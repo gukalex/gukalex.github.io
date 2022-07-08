@@ -7,7 +7,12 @@
     <!--meta http-equiv="refresh" content="0; URL=https://example.com/"-->
     <!--link rel="canonical" href="https://example.com/"-->
     <script>
-      window.location.replace("http://www.w3schools.com");
+      function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+      randomNum = randomIntFromInterval(0, 3600);
+      newUrl = "https://www.youtube.com/embed/EColTNIbOko?autoplay=1&start=" + randomNum; 
+      window.location.replace(newUrl);
     </script>
   </head>
   <body>
