@@ -23,6 +23,5 @@ end = findGetParameter('end');
 // type 0 - regular video
 randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
 newUrl = 'https://www.youtube.com/embed/' +  videoId + '?autoplay=1&start=' + randomNum;
-newUrl += videoId
 window.location.replace(newUrl);
 // todo: type 1 - playlist
