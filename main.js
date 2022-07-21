@@ -20,8 +20,17 @@ type = findGetParameter('type');
 start = findGetParameter('start');
 end = findGetParameter('end');
 
-// type 0 - regular video
-randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
-newUrl = 'https://www.youtube.com/embed/' +  videoId + '?autoplay=1&start=' + randomNum;
-window.location.replace(newUrl);
-// todo: type 1 - playlist
+if ('69420' == type) { // regular video
+  randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
+  newUrl = 'https://www.youtube.com/embed/' +  videoId + '?autoplay=1&start=' + randomNum;
+  window.location.replace(newUrl);
+}
+if ('42069' == type) { // playlist
+  randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
+  newUrl = 'https://www.youtube.com/embed?list=' +  videoId + '&autoplay=1&playnext=1&index=' + randomNum;
+  window.location.replace(newUrl);
+}
+if ('commit' == type) {
+  newUrl = 'http://whatthecommit.com/';
+  window.location.replace(newUrl);
+}
