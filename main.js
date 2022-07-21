@@ -31,6 +31,5 @@ if ('42069' == type) { // playlist
   window.location.replace(newUrl);
 }
 if ('commit' == type) {
-  newUrl = 'http://whatthecommit.com/';
-  window.location.replace(newUrl);
+  // do nothing - stay at default page with iframe
 }
