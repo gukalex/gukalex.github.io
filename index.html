@@ -8,26 +8,25 @@
     <!--link rel="canonical" href="https://example.com/"-->
   </head>
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
+   
+   html, body {
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    display:flex;
+  }
 
-    .bg {
-      /* The image used */
-      background-image: url("");
-
-      /* Full height */
-      height: 1%; 
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+  img {
+    padding: 0;
+    margin: 10px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
     }
   </style>
   <body>
-    <div class="bg" id="bg"></div>
+     <div class="bg" id="bg" style=""><img id="img1" src=""><img id="img2" src=""></div>
      <div id='main'>
       Message of the day: 
     </div>
