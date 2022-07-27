@@ -7,10 +7,30 @@
     <!--meta http-equiv="refresh" content="0; URL=https://example.com/"-->
     <!--link rel="canonical" href="https://example.com/"-->
   </head>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("");
+
+      /* Full height */
+      height: 1%; 
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
   <body>
     <div id='main'>
       Message of the day: 
     </div>
+    <div class="bg" id="bg"></div>
     <script src="main.js"></script>
   </body>
 </html>
