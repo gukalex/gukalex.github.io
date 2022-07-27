@@ -690,3 +690,9 @@ if ('github' == type) {
   }
   init();
 }
+if ('vulkan' == type) {
+  randomNum = randomIntFromInterval(0, 15);
+  name = randomNum + '.jpg'
+  document.getElementById("bg").style.height = "100%";
+  document.getElementById('bg').style.backgroundImage="url(" + name + ")";
+}
