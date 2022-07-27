@@ -693,6 +693,13 @@ if ('github' == type) {
 if ('vulkan' == type) {
   randomNum = randomIntFromInterval(0, 15);
   name = randomNum + '.jpg'
-  document.getElementById("bg").style.height = "100%";
-  document.getElementById('bg').style.backgroundImage="url(" + name + ")";
+  
+  randomNum = randomIntFromInterval(0, 15);
+  name2 = randomNum + '.jpg'
+  
+  var div = document.getElementById('main');
+  div.innerHTML = '';
+  
+  document.getElementById("img1").src = name;
+  document.getElementById("img2").src = name2;
 }
