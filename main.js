@@ -24,19 +24,33 @@ mute = findGetParameter('mute');
 if ('69420' == type) { // regular video
   randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
   newUrl = 'https://www.youtube.com/embed/' +  videoId + '?autoplay=1&start=' + randomNum;
-  if (mute != null && mute == '0')
-     ; // do nothing
-  else
+  if (mute == null || mute == '1')
     newUrl += '&mute=1';
+  else if (mute == '0')
+    ; // do nothing
+  else {
+    chance = parseInt(mute);
+    if (randomIntFromInterval(0, chance) == 1)
+      ; // play with sound
+    else
+      newUrl += '&mute=1';
+  }
   window.location.replace(newUrl);
 }
 if ('42069' == type) { // playlist
   randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
   newUrl = 'https://www.youtube.com/embed?list=' +  videoId + '&autoplay=1&playnext=1&index=' + randomNum;
-  if (mute != null && mute == '0')
-     ; // do nothing
-  else
+    if (mute == null || mute == '1')
     newUrl += '&mute=1';
+  else if (mute == '0')
+    ; // do nothing
+  else {
+    chance = parseInt(mute);
+    if (randomIntFromInterval(0, chance) == 1)
+      ; // play with sound
+    else
+      newUrl += '&mute=1';
+  }
   window.location.replace(newUrl);
 }
 if ('commit' == type) {
