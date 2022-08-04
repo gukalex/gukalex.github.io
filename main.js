@@ -33,11 +33,11 @@ if ('69420' == type) { // regular video
 if ('42069' == type) { // playlist
   randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
   newUrl = 'https://www.youtube.com/embed?list=' +  videoId + '&autoplay=1&playnext=1&index=' + randomNum;
-  window.location.replace(newUrl);
   if (mute != null && mute == '0')
      ; // do nothing
   else
     newUrl += '&mute=1';
+  window.location.replace(newUrl);
 }
 if ('commit' == type) {
   var commitMessages = `- Temporary commit.
