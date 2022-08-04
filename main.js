@@ -19,16 +19,25 @@ videoId = findGetParameter('videoId');
 type = findGetParameter('type');
 start = findGetParameter('start');
 end = findGetParameter('end');
+mute = findGetParameter('mute');
 
 if ('69420' == type) { // regular video
   randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
   newUrl = 'https://www.youtube.com/embed/' +  videoId + '?autoplay=1&start=' + randomNum;
+  if (mute != null && mute == '0')
+     ; // do nothing
+  else
+    newUrl += '&mute=1';
   window.location.replace(newUrl);
 }
 if ('42069' == type) { // playlist
   randomNum = randomIntFromInterval(parseInt(start), parseInt(end));
   newUrl = 'https://www.youtube.com/embed?list=' +  videoId + '&autoplay=1&playnext=1&index=' + randomNum;
   window.location.replace(newUrl);
+  if (mute != null && mute == '0')
+     ; // do nothing
+  else
+    newUrl += '&mute=1';
 }
 if ('commit' == type) {
   var commitMessages = `- Temporary commit.
